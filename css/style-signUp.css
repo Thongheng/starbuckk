@@ -1,0 +1,30 @@
+.person-info,
+.security,
+.term {
+    margin-bottom: 30px;
+}
+.term p {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: grey;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.box h3 {
+    color: grey;
+    margin-bottom: 10px;
+}
+label {
+    font-size: 14px;
+}
+.term label {
+    font-size: 14px;
+}
+.create {
+    width: 45%;
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+.more-info p {
+    margin-bottom: 50px;
+}

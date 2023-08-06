@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/style-menu.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <title>Starbuck</title>
+        <link rel="shortcut icon" type="image/png" href="../Asset/starbucks.png" />
+        <style>
+        .content {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content .textbox {
+            position: relative;
+            max-width: 600px;
+        }
+        .content .textbox .h2 {
+            color: #333;
+            font-size: 4em;
+            line-height: 1.4rem;
+            font-weight: 500;
+        }
+        .content .textbox h2 span {
+            color: #017143;
+            font-size: 1.2em;
+            font-weight: 900px;
+        }
+        .content .textbox p {
+            color: #333;
+        }
+        .content .textbox a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background-color: #017143;
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .content .imgBox {
+            width: 600px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+            margin-top: 50px;
+        }
+        .content .imgBox img {
+            max-width: 340px;
+        }
+        .thumb {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .thumb li {
+            list-style-type: none;
+            display: inline-block;
+            margin: 0px 20px;
+            cursor: pointer;
+        }
+        .thumb li:hover {
+            transform: translateY(-15px);
+        }
+        .thumb li img {
+            max-width: 60px;
+        }
+        .sci {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .sci li {
+            list-style: none;
+        }
+        .sci li a {
+            display: inline-block;
+            margin: 5px 0;
+            /* transform: scale(0.6) */
+            font-size: 30px;
+            color: #017143;
+        }
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f9a629;
+            clip-path: circle(600px at right 800px);
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="circle"></div>
+
+        <header>
+            <nav class="nav">
+                <div class="left">
+                    <img src="../Asset/logo.png" alt="" />
+                    <a href="https://www.starbucks.com/menu">Menu</a>
+                    <a href="https://www.starbucks.com/rewards">Reward</a>
+                    <a href="https://www.starbucks.com/gift">Gift cards </a>
+                </div>
+                <div class="right">
+                    <a href="login.html" class="btn signin">Sign in </a>
+                    <a href="sign-up.html" class="btn login">Join now</a>
+                </div>
+            </nav>
+        </header>
+        <main class="new">
+            <div class="content">
+                <div class="textbox">
+                    <h2>
+                        It's not just Coffee<br />
+                        It's <span>Starbucks</span>
+                    </h2>
+                    <p>For a limited time only, you can savor the delightful taste of Starbucks coffee, teas, and treats with a $20 Gift Card for the
+                        unbeatable price of just $10! <br />
+                    </p>
+                    <a href="login.html">Get gift card now</a>
+                </div>
+                <div class="imgBox">
+                    <img src="../Asset/card 25.jpg" class="starbucks" alt="Starbucks Coffee" />
+                </div>
+            </div>
+            <ul class="thumb">
+                <li>
+                    <img src="../Asset/card 25.jpg" onclick="imgSlider('../Asset/card 25.jpg'); changeCircleColor('#f9a629')" />
+                </li>
+                <li>
+                    <img src="../Asset/card 50.jpg" onclick="imgSlider('../Asset/card 50.jpg'); changeCircleColor('#ffc179')" />
+                </li>
+                <li>
+                    <img src="../Asset/card2 50.jpg" onclick="imgSlider('../Asset/card2 50.jpg'); changeCircleColor('#b6e5de')" />
+                </li>
+            </ul>
+
+            <ul class="sci">
+                <li>
+                    <a href="https://www.facebook.com/Starbucks/" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/Starbucks?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"
+                        ><i class="bx bxl-twitter"></i
+                    ></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/starbucks/?hl=en" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+                </li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector(".starbucks").src = anything;
+            }
+
+            function changeCircleColor(color) {
+                const circle = document.querySelector(".circle");
+                circle.style.background = color;
+            }
+        </script>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/style-menu.css" />
+        <link rel="stylesheet" href="../css/style-payment.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Starbuck | Payment</title>
+        <link rel="shortcut icon" type="image/png" href="../Asset/starbucks.png" />
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <div class="left">
+                    <img src="../Asset/logo.png" alt="" />
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="main">
+                <div class="info">
+                    <h3>Starbucks</h3>
+                </div>
+                <div class="payment-info">
+                    <h2>Payment method</h2>
+                    <div class="payment-info-form">
+                        <form action="thank.html" method="get">
+                            <div>
+                                <label for="form-id">Card number</label>
+                                <input
+                                    type="number"
+                                    inputmode="numeric"
+                                    name="form-id"
+                                    id="form-id"
+                                    placeholder="xxxx xxxx xxxx xxxx"
+                                    maxlength="19"
+                                    required
+                                    oninput="formatCreditCard()"
+                                />
+                            </div>
+                            <div>
+                                <label for="form-name">Name</label>
+                                <input type="text" name="form-name" id="form-name" placeholder="Cardholder name" required />
+                            </div>
+                            <div>
+                                <label for="date">Expiration date</label>
+                                <select name="date-month" id="date-month">
+                                    <option value="1">01</option>
+                                    <option value="2">02</option>
+                                    <option value="3">03</option>
+                                    <option value="4">04</option>
+                                    <option value="5">05</option>
+                                    <option value="6">06</option>
+                                    <option value="7">07</option>
+                                    <option value="8">08</option>
+                                    <option value="9">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <select name="date-year" id="date-year">
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                    <option value="2031">2031</option>
+                                    <option value="2032">2032</option>
+                                    <option value="2033">2033</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="form-cvv">CVV/CVC</label>
+                                <input type="number" name="form-cvv" id="form-cvv" required />
+                            </div>
+                            <button type="submit" class="btn buy">Purchase</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
